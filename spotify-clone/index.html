@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="A responsive Spotify-inspired music dashboard built with HTML, CSS and JavaScript." />
+  <title>Soundify — Music Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">● <span>SOUNDIFY</span></div>
+      <nav><a class="active" href="#home">⌂ <span>Home</span></a><a href="#browse">◉ <span>Browse</span></a><a href="#library">▣ <span>Your Library</span></a></nav>
+      <div class="side-title">YOUR PLAYLISTS <button id="addPlaylist">＋</button></div>
+      <div class="playlists" id="playlistList"><a href="#">Late Night Drive</a><a href="#">Coding Mode</a><a href="#">Workout Energy</a><a href="#">Chill Sundays</a><a href="#">Indie Finds</a></div>
+      <div class="side-bottom"><a href="#">⚙ Settings</a><a href="#">⇩ Install App</a></div>
+    </aside>
+
+    <main class="main" id="home">
+      <header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div class="arrows"><button>‹</button><button>›</button></div><label class="search"><span>⌕</span><input id="search" placeholder="What do you want to play?" /></label><button class="upgrade">Upgrade</button><button class="avatar">BG</button></header>
+      <div class="page">
+        <section class="welcome"><div><p class="muted">SUNDAY, SEPTEMBER 20</p><h1>Good evening</h1></div><div class="quick-grid" id="quickGrid"></div></section>
+        <section><div class="heading"><h2>Made for you</h2><button>Show all</button></div><div class="album-grid" id="madeForYou"></div></section>
+        <section><div class="heading"><h2>Recently played</h2><button>Show all</button></div><div class="album-grid" id="recently"></div></section>
+        <section><div class="heading"><h2>Made for late nights</h2><button>Show all</button></div><div class="album-grid" id="lateNight"></div></section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="player">
+    <div class="now-playing"><div class="cover" id="playerCover">N</div><div><strong id="playerTitle">Neon Dreams</strong><small id="playerArtist">The Midnight Club</small></div><button>♡</button></div>
+    <div class="controls"><div class="control-buttons"><button>↶</button><button class="play" id="playBtn">▶</button><button>↷</button></div><div class="progress"><span>0:32</span><input id="progress" type="range" min="0" max="100" value="28"><span>3:42</span></div></div>
+    <div class="volume"><span>▣</span><input type="range" min="0" max="100" value="72"><span>⌕</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
